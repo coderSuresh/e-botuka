@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #af3333;
+  --gray-color: #7f8c8d;
+  --dark-color: #2d3436;
+  --light-color: #f5f6fa;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: none;
+  border: 1px solid var(--gray-color);
+}
+
+.text-red {
+  color: var(--primary-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    .hamburger {
+      display: none;
+      cursor: pointer;
+
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--dark-color);
+        margin: 5px;
+        transition: all 0.3s;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      li {
+        list-style: none;
+
+        a {
+          color: var(--dark-color);
+          font-weight: 500;
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+    position: relative;
+
+    nav {
+      .hamburger.active {
+        .bar1 {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .bar2 {
+          opacity: 0;
+        }
+        .bar3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+
+      ul {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    nav {
+      ul {
+        width: calc(100% - 2rem);
+        align-items: center;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
