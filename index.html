@@ -21,44 +21,163 @@
   </head>
   <body>
     <header>
-        <h2>
-            <span class="text-red">e-</span>Botuka
-        </h2>
+      <h2><span class="text-red">e-</span>Botuka</h2>
 
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <div class="hamburger">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
-
+        <div class="hamburger">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero text-center">
+      <section class="hero text-center">
+        <p>By the poor, for the poor</p>
+
+        <h1 class="hero-text">
+          Your <span class="text-red">Digital</span> Botuka For Online
+          <span class="text-red">Bhikh</span>
+        </h1>
+
+        <div class="btn-container">
+          <a href="#" class="btn btn-primary">Get Started</a>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </section>
+
+      <section id="introduction" class="introduction new-section">
+        <h2 class="section-title">Introduction</h2>
+
+        <div class="introduction-content">
+          <div class="introduction-text">
             <p>
-                By the poor, for the poor
+              Are you poor? We can feel your pain. We are aware that visiting
+              people&apos;s house or sit in one place with a botuka in hand for
+              a whole day to collect some pennies is tedious task. So, we have
+              come up with an awesome platform to collect pennies passively from
+              the comfort of your house. <br />
+              <br />
+              You just need to go through a few step to setup an account and
+              done. You can passively collect pennies with our reliable servers,
+              you can collect pennies 24 / 7 a day 365 days a year. <br />
+              <br />
+              What are you waiting for? Create an account now and enjoy online
+              bhikh with e-Botuka
             </p>
+          </div>
 
-            <h1 class="hero-text">
-                Your <span class="text-red">Digital</span> Botuka For Online <span class="text-red">Bhikh</span>
-            </h1>
+          <div class="introduction-img">
+            <img src="images/botuka.png" alt="botuka" />
+          </div>
+        </div>
+      </section>
 
-            <div class="btn-container">
-                <a href="#" class="btn btn-primary">Get Started</a>
-                <a href="#" class="btn btn-secondary">Learn More</a>
+      <section id="features" class="features new-section">
+        <h2 class="section-title text-center">Features</h2>
+
+        <div class="features-container">
+          <div class="feature">
+            <img src="images/clock.svg" alt="" />
+            <h3>24/7 Bhikh</h3>
+            <p>
+              With our reliable servers, collect bhikh 24/7 from the comfort of
+              your house
+            </p>
+          </div>
+
+          <div class="feature">
+            <img src="images/free.svg" alt="" />
+            <h3>0% Commission</h3>
+            <p>
+              Being poor, we know the pain of poor, so we have decided to take
+              0% commission from your bhikh
+            </p>
+          </div>
+
+          <div class="feature">
+            <img src="images/unblock.svg" alt="" />
+            <h3>No Boundaries</h3>
+            <p>
+              With e-Botuka, your can get bhikh from around the globe, hence,
+              increasing your income
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact new-section">
+        <h2 class="section-title text-center">Contact us</h2>
+
+        <form action="#">
+          <div class="double-col">
+            <div>
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" placeholder="John Doe" />
+            </div>
+            <div>
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="9800000000"
+                maxlength="10"
+              />
+            </div>
+          </div>
+
+          <div class="double-col">
+            <div>
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="New Baneshwor, Kathmandu"
+              />
             </div>
 
-        </section>
+            <div>
+              <label for="bhikhari-id">Bhikhari ID (optional):</label>
+              <input type="text" id="bhikhari-id" placeholder="BH420M" />
+            </div>
+          </div>
+
+          <div>
+            <label for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Your message here"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-fit">Send Message</button>
+        </form>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>
+        Copyright &copy; <span class="date"></span>
+        <span class="text-red"><strong>e-Botuka</strong></span
+        >. All rights reserved
+      </p>
+      <p>
+        Made by
+        <a class="text-red" href="https://sureshdahal.com.np" target="_blank"
+          ><strong>Coder Suresh</strong></a
+        >
+      </p>
+    </footer>
   </body>
 </html>

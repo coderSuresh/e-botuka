@@ -38,6 +38,11 @@ input {
   text-align: center;
 }
 
+.w-fit {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -61,6 +66,12 @@ input {
 .btn-secondary {
   background-color: #fff;
   color: var(--primary-color);
+}
+
+.new-section {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 header {
@@ -97,7 +108,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 2rem;
       transition: all 0.3s ease-in-out;
 
       li {
@@ -118,9 +129,12 @@ header {
 }
 
 @media (max-width: 768px) {
+  .new-section {
+    padding: 3rem 1rem;
+  }
+
   header {
     padding: 0.5rem 1rem;
-    position: relative;
 
     nav {
       .hamburger.active {
@@ -180,7 +194,8 @@ main {
     align-items: center;
 
     .hero-text {
-      font-size: 3rem;
+      font-size: 4rem;
+      padding: 1rem;
       font-weight: 700;
       max-width: 768px;
       margin: 1rem auto;
@@ -191,11 +206,150 @@ main {
     }
 
     .btn-container {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        margin-top: 2rem;
-        flex-wrap: wrap;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
     }
   }
+
+  .section-title {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+
+    &.text-center {
+      text-align: center;
+      margin: 0 auto 2rem;
+    }
+  }
+
+  .introduction-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    div {
+      width: 60%;
+      text-align: justify;
+
+      &.introduction-img {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+
+      div, div.introduction-img {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .features-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+    .feature {
+      border: 1px solid var(--gray-color);
+      padding: 1rem;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 4px;
+
+      &:hover {
+        border-color: var(--primary-color);
+      }
+
+      img {
+        width: 100px;
+      }
+
+      h3 {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .contact {
+    form {
+      max-width: 768px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &.double-col {
+          flex-direction: row;
+          gap: 1rem;
+
+          @media (max-width: 576px) {
+            flex-direction: column;
+          }
+
+          div {
+            width: 100%;
+          }
+        }
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        padding: 0.85rem;
+        border-radius: 4px;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        outline: none;
+        caret-color: var(--primary-color);
+        resize: none;
+        font-family: inherit;
+
+        &:focus {
+          border-color: var(--primary-color);
+        }
+      }
+
+        button {
+            font-size: inherit;
+            padding: 1rem 2rem;
+        }
+    }
+  }
+}
+
+footer {
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  );
+  padding: 1rem 0;
+  text-align: center;
 }
