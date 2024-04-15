@@ -1,0 +1,97 @@
+.register-container, .login-container{
+    width: 70%;
+
+    .container-heading,
+    .container-heading>.heading-main{
+        margin-bottom: 1rem;
+    }
+
+    .container-heading,
+    .container-form,
+    .container-form>.form-items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-heading{ 
+        .heading-main{
+            color: var(--primary-dark-color);
+        }
+    }
+
+    .container-form{
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .form-items>input,
+        .btn-register{
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .form-items,
+        .show-password-box,
+        .btn-register,
+        .sign-in-box{
+            width: 50%;
+        }
+
+        .form-items>.form-label,
+        .show-password-box,
+        .btn-register{
+            font-weight: 500;
+        }
+
+        .form-items{
+            .form-label{
+                font-size: 1rem;
+          }
+
+            input{
+
+                font-weight: 500;
+                margin-bottom: 4px;
+                padding: 0.8rem 0.75rem;
+                border: 2px solid var(--gray-color);
+                border-radius: 4px;
+                caret-color: var(--primary-color);
+
+                &:focus{
+                    border-color: var(--primary-color);
+                }
+            }
+        }
+        
+        .show-password-box{
+            input{
+                accent-color: var(--primary-color);
+                cursor: pointer;
+            }
+        }
+
+        .btn-register{
+            border: none;
+            background-color: var(--primary-color);
+            font-weight: 600;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: 4px solid transparent;            
+
+            &:hover{
+                outline: 4px solid var(--primary-transparent);
+                cursor: pointer;
+            }
+        }
+
+        .sign-in-box{
+            .sign-in-desc{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
