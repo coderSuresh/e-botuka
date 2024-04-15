@@ -3,6 +3,7 @@ const ul = document.querySelector('ul');
 
 const menuItems = document.querySelectorAll('li');
 
+menuItems &&
 menuItems.forEach((item) => {
     item.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -10,6 +11,7 @@ menuItems.forEach((item) => {
     });
 });
 
+hamburger && 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 
@@ -22,4 +24,17 @@ hamburger.addEventListener('click', () => {
 
 const dateContainer = document.querySelector('.date');
 const date = new Date();
-dateContainer.textContent = date.getFullYear();
+dateContainer &&
+(dateContainer.textContent = date.getFullYear());
+
+const passwordInput = document.getElementById('password');
+const showPasswordCheckbox = document.getElementById('show-password');
+
+showPasswordCheckbox &&
+showPasswordCheckbox.addEventListener('change', function() {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});
