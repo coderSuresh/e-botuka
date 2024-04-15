@@ -145,10 +145,11 @@ main{
                 border: 1px solid;
                 border-radius: 4px;
                 caret-color: var(--primary-color);
+                outline: 2px solid transparent;
 
                 &:focus{
                     outline: 2px solid var(--primary-color);
-                    border: none;
+                    border-color: transparent;
                 }
             }
         }
