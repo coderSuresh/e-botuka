@@ -11,7 +11,7 @@
   --gray-color: #7f8c8d;
   --dark-color: #2d3436;
   --light-color: #f5f6fa;
-  --gradient-color-1: #f3f2e7;
+  --gradient-color-1: #ffffff;
   --gradient-color-2: #f98c8c;
 }
 
@@ -350,6 +350,6 @@ footer {
     var(--gradient-color-1),
     var(--gradient-color-2)
   );
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
