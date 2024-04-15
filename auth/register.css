@@ -27,12 +27,12 @@ body{
     margin: 0 auto;
 }
 
-main{
+main,
+.container{
     display: flex;
 }
 
 .container{
-    display: flex;
     flex-direction: column;
     min-height: 100vh;
     padding: 2rem;
@@ -42,6 +42,12 @@ main{
     color: var(--primary-dark-color);
     font-weight: bold;
     text-decoration: none;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .details-container{
@@ -59,10 +65,7 @@ main{
     }
 
     .description{
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
         .main-text{
             font-size: 20px;
@@ -81,9 +84,6 @@ main{
     .image-section{
         position: relative;
         aspect-ratio: 1/1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         
         .background{
             position: absolute;
@@ -93,13 +93,9 @@ main{
             background-color: var(--light-color);
             z-index: 0;
             box-shadow: 1px 1px 30px white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         .avatar{
-            object-fit: fill;
             width: 100%;
             z-index: 1;
         }
@@ -109,39 +105,56 @@ main{
 .register-container{
     width: 70%;
 
-    .container-heading{
+    .container-heading,
+    .container-heading>.heading-main{
+        margin-bottom: 1rem;
+    }
+
+    .container-heading,
+    .container-form,
+    .container-form>.form-items{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-        
+    }
+
+    .container-heading{ 
         .heading-main{
             color: var(--primary-dark-color);
-            margin-bottom: 1rem;
         }
     }
 
     .container-form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 1rem;
         margin-bottom: 2rem;
 
-        .form-items{
-            display: flex;
-            flex-direction: column;
-            width: 50%;
+        .form-items>input,
+        .btn-register{
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
 
+        .form-items,
+        .show-password-box,
+        .btn-register,
+        .sign-in-box{
+            width: 50%;
+        }
+
+        .form-items>.form-label,
+        .show-password-box,
+        .btn-register{
+            font-weight: 500;
+        }
+
+        .form-items{
             .form-label{
                 font-size: 1rem;
-                font-weight: 500;
-                margin-bottom: 4px;
-            }
+          }
 
             input{
+
+                font-weight: 500;
+                margin-bottom: 4px;
                 padding: 0.8rem 0.75rem;
                 border: 2px solid var(--gray-color);
                 border-radius: 4px;
@@ -154,9 +167,6 @@ main{
         }
         
         .show-password-box{
-            width: 50%;
-            font-weight: 500;
-
             input{
                 accent-color: var(--primary-color);
                 cursor: pointer;
@@ -164,10 +174,7 @@ main{
         }
 
         .btn-register{
-            width: 50%;
-            padding: 0.5rem;
             border: none;
-            border-radius: 4px;
             background-color: var(--primary-color);
             font-weight: 600;
             color: white;
@@ -182,10 +189,6 @@ main{
         }
 
         .sign-in-box{
-            display: flex;
-            justify-content: center;
-            width: 50%;
-
             .sign-in-desc{
                 margin-right: 10px;
             }
